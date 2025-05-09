@@ -6,6 +6,9 @@ const pool = new Pool({
     database: 'biblioteca', // Substitua pelo nome do seu banco de dados
     password: '0000', // Substitua pela sua senha
     // port: 5432, // Porta padrão do PostgreSQL
+     ssl: {
+            rejectUnauthorized: false // Adicione esta linha para usar SSL
+        }
 });
 
 pool.on('connect', () => {
